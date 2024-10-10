@@ -80,7 +80,6 @@ header .left,.right,nav ul{
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
     background: #D4A486;
 }
@@ -109,7 +108,7 @@ header .left,.right,nav ul{
 
 /** hero section **/
 .hero-section{
-    position: relative;
+    /* position: relative; */
     width: 100%;
     margin-inline: auto;
     justify-content: space-between;
@@ -124,6 +123,7 @@ header .left,.right,nav ul{
     /* align-items: center; */
     justify-content: left;
     text-align: left;
+    /* border: 1px solid red; */
 }
 .content h1{
     font-size: 3vw;
@@ -149,8 +149,14 @@ header .left,.right,nav ul{
     font-size: 1.3rem;
     text-transform: uppercase;
 }
+.content button:hover{
+    cursor: pointer;
+    background: #ce0613;
+}
 .images{
     width: 50%;
+    /* border: 1px solid red; */
+    position: relative;
 }
 .images .img{
     max-width: 450px;
@@ -177,9 +183,10 @@ header .left,.right,nav ul{
     border-radius: 25px;
     max-width: 510px;
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     background: #ffffffe3;
-    right: 20%;
+    margin-left: -150px;
+    /* right: 20%; */
     font-weight: 600;
 }
 .images .tranformation{
@@ -189,7 +196,8 @@ header .left,.right,nav ul{
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 30px 10px;
+    padding: 30px ;
+    background: #fff;
     border-radius: 25px ;
     /* border: 1px solid red; */
 }
@@ -219,4 +227,155 @@ header .left,.right,nav ul{
     transform: rotate(-45deg);
     right: -10%;
     background-color: #F9DF80;
+}
+
+/** hero section responsiveness **/
+@media(max-width:990px){
+    .hero-section{
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 50px;
+        padding-inline:20px;
+    }
+    .content,.images{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content h1{
+        line-height: 2.5rem;
+    }
+    .images .tranformation{
+        font-size: 1.5vw;
+        left: 0px;
+        top: -10px;
+    }
+    .images .img{
+        margin-inline:auto ;
+    }
+    .detail{
+        width: 50vw;
+        align-items: flex-start;
+        /* left: 80px; */
+        gap: 1.5vw;
+    }
+    .detail p{
+        font-size: 1.5vw;
+        /* font-size: 0.8rem; */
+    }
+
+}
+
+
+/** cources section **/
+
+.carrerpath {
+    text-align: center;
+    margin-top: 10%;
+}
+.carrerpath h1{
+    word-spacing: 5px;
+}
+.courcespap{
+    background: #fde8e8;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: max-content;
+    margin-inline: auto;
+    padding: 7px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.courcespap button{
+    border: none;
+    border-radius: 25px;
+    background: transparent;
+    color: #000;
+    font-weight: 600;
+    padding:4px 10px;
+    font-size: 18px;
+}
+.courcespap button:nth-child(1){
+    background: #E02424;
+    color: #fff;
+}
+.carrerpath h3{
+    font-weight: 600;
+}
+
+.features{
+    display: flex;
+    margin-block: 30px;
+    gap: 20px;
+    justify-content: center;
+}
+.features div{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.features div p{
+    font-weight: 500;
+    text-align: left;
+}
+.features div svg{
+    width: 50px;
+    color: #BE3A47;
+
+}
+
+.rolls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+.roll{
+    width: 440px;
+    padding: 30px 20px;
+    gap: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid rgba(208, 205, 205, 0.655);
+    box-shadow: 0 0 19px 1px rgba(0,0,0,0.09);
+    border-radius: 10px;
+}
+.roll h2{
+    font-weight: 500;
+}
+.roll .divider{
+    width: 100%;
+    border-radius: 50%;
+    height: 2px;
+    background: rgba(128, 128, 128, 0.486);
+    opacity: 0.3;
+    margin-top: 10px;
+}
+.roll .feat{
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+.roll button{
+    width: 100%;
+    text-align: center;
+    padding-block: 10px;
+    border-radius: 10px;
+    border: 1px solid #ED0331;
+    color: #ED0331;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+.roll button:hover{
+    cursor: pointer;
+    background: #ed284f21;
 }
